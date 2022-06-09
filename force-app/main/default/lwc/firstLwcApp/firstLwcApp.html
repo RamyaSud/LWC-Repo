@@ -1,0 +1,24 @@
+<template>
+    
+    <div class="slds-m-around_medium">
+        <h1>Welcome to LWC world!</h1>
+        <lightning-input label="Enter text" value={inputTxt} onchange={handleChange}>
+        </lightning-input>
+       <p>{greeting}</p>
+       <p>{inputTxt}</p>
+       <lightning-button label="Click Me" onclick={handleClick}></lightning-button>
+    </div>
+    <div>
+        <template for:each={result} for:item="itm">
+            <div key= {itm.Id}>
+                <lightning-card  variant="Narrow"  title={itm.Name} icon-name="standard:account">
+                    <p class="slds-p-horizontal_medium">Industry : {itm.Industry}</p>
+                    <p class="slds-p-horizontal_medium">Rating : {itm.Rating} </p>
+                    <p class="slds-p-horizontal_medium">Website : {itm.Website} </p>
+                    <p class="slds-p-horizontal_medium">Revenue($) : {itm.AnnualRevenue} </p>
+                </lightning-card>
+            </div>
+            
+        </template>
+    </div>
+</template>

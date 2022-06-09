@@ -1,0 +1,36 @@
+<template>
+    <div  class="slds-p-around_small" >
+ <lightning-card title="ToDo List">
+     <lightning-button-icon  icon-name="utility:sync" title="Sync" slot="actions">
+     </lightning-button-icon>
+     <lightning-layout >
+        <lightning-layout-item padding="around-small">
+         <ul class="slds-has-dividers_around-space">
+           <li class="slds-item">
+                Task 1   Task 1  Task 1  Task 1  Task 1  Task 1  Task 1  Task 1  Task 1  Task 1  Task 1  Task 1&nbsp;&nbsp;&nbsp;&nbsp;
+                <lightning-button-icon icon-name="utility:delete" title ="Remove" slot="actions"></lightning-button-icon>
+           </li>
+           <li class="slds-item">
+                Task 2 &nbsp;&nbsp;&nbsp;&nbsp;
+                <lightning-button-icon icon-name="utility:delete" title ="Remove" slot="actions"></lightning-button-icon>
+           </li>
+         </ul>
+        </lightning-layout-item>
+     </lightning-layout>
+  
+        <p slot="footer">
+            <lightning-layout vertical-align="center" horizontal-align="spread">
+                <lightning-layout-item >
+                   <lightning-input type="text" placeholder="Enter new task" required></lightning-input>
+               </lightning-layout-item>
+               <lightning-layout-item >
+                   <lightning-button variant="brand" label="Add"></lightning-button>
+               </lightning-layout-item>
+            </lightning-layout>
+         
+        </p>
+   
+     
+ </lightning-card>
+</div>
+</template>
