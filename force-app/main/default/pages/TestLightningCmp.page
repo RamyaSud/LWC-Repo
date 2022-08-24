@@ -1,0 +1,16 @@
+<apex:page>        
+    <apex:includeLightning />
+    <div id = "con" />
+    <script>
+        $Lightning.use("c:TestingLighthCmpInVf", function() {
+            $Lightning.createComponent(
+                "c:firstLwcApp",
+                {},
+                "con",
+                function(cmp) {
+                    console.log('Component is created!');
+                    console.log(cmp);
+                });
+            });        
+      </script>
+</apex:page>
