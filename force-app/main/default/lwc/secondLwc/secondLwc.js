@@ -1,4 +1,4 @@
-import { LightningElement,wire,api, track } from 'lwc';
+import { LightningElement,wire,api } from 'lwc';
 import { getRecord } from 'lightning/uiRecordApi';
 import COMPANY from '@salesforce/schema/Lead.Company';
 import ANNUAL_REVENUE from '@salesforce/schema/Lead.AnnualRevenue';
@@ -12,6 +12,7 @@ export default class SecondLwc extends LightningElement {
     @api recordId
     companyName;
     annualRev;
+    
     errorMsg = '';
     @wire (getRecord, {recordId : '$recordId', fields  : FIELDS})
     getResults({error,data}){

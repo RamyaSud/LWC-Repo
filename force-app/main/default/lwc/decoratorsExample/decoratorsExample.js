@@ -2,7 +2,7 @@ import { LightningElement,api,track } from 'lwc';
 
 export default class DecoratorsExample extends LightningElement {
     title = "Welcome to baby color code";
-    @api message = "";
+     message = "";
     /*@track colorCode = 
         [
             {
